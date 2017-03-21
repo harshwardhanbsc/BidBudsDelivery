@@ -20,7 +20,7 @@ namespace Nop.Admin.Validators.Catalog
                 RuleFor(x => x.ReviewText).NotEmpty().WithMessage(localizationService.GetResource("Admin.Catalog.ProductReviews.Fields.ReviewText.Required"));
             }
 
-            SetDatabaseValidationRules<ProductReview>(dbContext);
+            SetStringPropertiesMaxLength<ProductReview>(dbContext);
         }
     }
 }

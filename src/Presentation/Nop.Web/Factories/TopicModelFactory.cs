@@ -14,9 +14,6 @@ using Nop.Web.Models.Topics;
 
 namespace Nop.Web.Factories
 {
-    /// <summary>
-    /// Represents the topic model factory
-    /// </summary>
     public partial class TopicModelFactory : ITopicModelFactory
     {
         #region Fields
@@ -53,12 +50,7 @@ namespace Nop.Web.Factories
         #endregion
 
         #region Utilities
-
-        /// <summary>
-        /// Prepare the topic model
-        /// </summary>
-        /// <param name="topic">Topic</param>
-        /// <returns>Topic model</returns>
+        
         protected virtual TopicModel PrepareTopicModel(Topic topic)
         {
             if (topic == null)
@@ -80,16 +72,11 @@ namespace Nop.Web.Factories
             };
             return model;
         }
-
+        
         #endregion
 
         #region Methods
 
-        /// <summary>
-        /// Get the topic model by topic identifier
-        /// </summary>
-        /// <param name="topicId">Topic identifier</param>
-        /// <returns>Topic model</returns>
         public virtual TopicModel PrepareTopicModelById(int topicId)
         {
             var cacheKey = string.Format(ModelCacheEventConsumer.TOPIC_MODEL_BY_ID_KEY,
@@ -116,11 +103,6 @@ namespace Nop.Web.Factories
             return cachedModel;
         }
 
-        /// <summary>
-        /// Get the topic model by topic system name
-        /// </summary>
-        /// <param name="systemName">Topic system name</param>
-        /// <returns>Topic model</returns>
         public virtual TopicModel PrepareTopicModelBySystemName(string systemName)
         {
             var cacheKey = string.Format(ModelCacheEventConsumer.TOPIC_MODEL_BY_SYSTEMNAME_KEY,
@@ -145,11 +127,6 @@ namespace Nop.Web.Factories
             return cachedModel;
         }
 
-        /// <summary>
-        /// Get topic template view path
-        /// </summary>
-        /// <param name="topicTemplateId">Topic template identifier</param>
-        /// <returns>View path</returns>
         public virtual string PrepareTemplateViewPath(int topicTemplateId)
         {
             var templateCacheKey = string.Format(ModelCacheEventConsumer.TOPIC_TEMPLATE_MODEL_KEY, topicTemplateId);

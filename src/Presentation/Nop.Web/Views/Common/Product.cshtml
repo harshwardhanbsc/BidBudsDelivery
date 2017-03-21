@@ -1,0 +1,152 @@
+﻿@model IList<CategoryModel>
+@using Nop.Web.Models.Catalog;
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts("Products");
+    //page class
+    Html.AppendPageCssClassParts("html-product-page");
+}
+
+@section header
+{
+    <div class="header-section">
+        <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" />
+        <div class="headerbox">
+            <h2>Product</h2>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li class="active">Product</li>
+            </ol>
+        </div>
+    </div>
+}
+@section left{
+    @if (Model.Count > 0)
+    {
+        <nav class="navbar navbar-default sidenav hidden-xs">
+            <ul class="nav navbar-nav">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="#@item.Name.ToLower()" role="tab" data-toggle="tab">
+                            @item.Name
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+        <div class="category-home prelative visible-xs" id="sticky">
+            <div class="row">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <!-- Indicators -->
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                        @foreach (var item in Model)
+                        {
+                            var indexofitem = Model.IndexOf(item);
+                            if (indexofitem == 0)
+                            {
+                                <div class="item tab-item active">
+                                    <a href="#@item.Name.ToLower()" data-toggle="tab">
+                                        @*<img src="@item.PictureModel.FullSizeImageUrl" alt="@item.PictureModel.AlternateText" title="@item.PictureModel.Title" />*@
+                                        <h3>@item.Name</h3>
+                                    </a>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="item tab-item">
+                                    <a href="#@item.Name.ToLower()" data-toggle="tab">
+                                        @*<img src="@item.PictureModel.FullSizeImageUrl" alt="@item.PictureModel.AlternateText" title="@item.PictureModel.Title" />*@
+                                        <h3>@item.Name</h3>
+                                    </a>
+                                </div>
+                            }
+
+                        }
+
+
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+}
+@if (Model.Count > 0)
+{  <div class="tab-content">
+
+        @foreach (var item in Model)
+        {
+            var index = Model.IndexOf(item);
+            var activeclass = string.Empty;
+            if (index == 0)
+            {
+                activeclass = "active";
+            }
+            <div role="tabpanel" class="tab-pane @activeclass" id="@item.Name.ToLower()">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        @Html.Raw(item.Description)
+                    </div>
+                    @{
+                        if (item.SubCategories.Count != 3)
+                        {
+                            <div class="col-lg-12 col-md-12 col-sm-12 three text-center">
+                                <ul>
+                                    @foreach (var subCategory in item.SubCategories)
+                                    {
+                                        <li>
+                                            <img src="@subCategory.PictureModel.FullSizeImageUrl" />
+                                            <h3>@subCategory.Name</h3>
+                                            @Html.Raw(subCategory.Description)
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-lg-12 col-md-12 col-sm-12 three text-center">
+                                <ul>
+                                    @foreach (var subCategory in item.SubCategories)
+                                    {
+                                        <li>
+                                            <img src="@subCategory.PictureModel.FullSizeImageUrl" />
+                                            <h3>@subCategory.Name</h3>
+                                            @Html.Raw(subCategory.Description)
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
+                    <div class="gallery-block  three edibles">
+                        <ul>
+                            @foreach (var products in item.Products)
+                            {
+                                <li>
+                                    @Html.Action("HomePageProductDetails", "Product", new { productId = products.Id }) @*@Html.Partial("_ProductBox", prducts)*@
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                        }
+    </div>
+                        }

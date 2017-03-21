@@ -114,7 +114,7 @@ namespace Nop.Admin.Validators.Customers
                     .When(x => IsRegisteredCustomerRoleChecked(x, customerService));
             }
 
-            SetDatabaseValidationRules<Customer>(dbContext);
+            SetStringPropertiesMaxLength<Customer>(dbContext);
         }
 
         private bool IsRegisteredCustomerRoleChecked(CustomerModel model, ICustomerService customerService)

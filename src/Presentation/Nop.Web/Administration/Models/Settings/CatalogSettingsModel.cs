@@ -236,5 +236,6 @@ namespace Nop.Admin.Models.Settings
         public bool IgnoreStoreLimitations { get; set; }
         [NopResourceDisplayName("Admin.Configuration.Settings.Catalog.CacheProductPrices")]
         public bool CacheProductPrices { get; set; }
+
     }
 }

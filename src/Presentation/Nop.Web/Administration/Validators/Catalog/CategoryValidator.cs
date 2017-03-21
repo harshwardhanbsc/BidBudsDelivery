@@ -22,7 +22,7 @@ namespace Nop.Admin.Validators.Catalog
                 return null;
             });
 
-            SetDatabaseValidationRules<Category>(dbContext);
+            SetStringPropertiesMaxLength<Category>(dbContext);
         }
     }
 }

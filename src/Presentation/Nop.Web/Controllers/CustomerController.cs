@@ -933,11 +933,8 @@ namespace Nop.Web.Controllers
                         {
                             //change username
                             _customerRegistrationService.SetUsername(customer, model.Username.Trim());
-
                             //re-authenticate
-                            //do not authenticate users in impersonation mode
-                            if (_workContext.OriginalCustomerIfImpersonated == null)
-                                _authenticationService.SignIn(customer, true);
+                            _authenticationService.SignIn(customer, true);
                         }
                     }
                     //email
@@ -947,13 +944,10 @@ namespace Nop.Web.Controllers
                         var requireValidation = _customerSettings.UserRegistrationType ==
                                                 UserRegistrationType.EmailValidation;
                         _customerRegistrationService.SetEmail(customer, model.Email.Trim(), requireValidation);
-
-                        //do not authenticate users in impersonation mode
-                        if (_workContext.OriginalCustomerIfImpersonated == null)
+                        //re-authenticate (if usernames are disabled)
+                        if (!_customerSettings.UsernamesEnabled && !requireValidation)
                         {
-                            //re-authenticate (if usernames are disabled)
-                            if (!_customerSettings.UsernamesEnabled && !requireValidation)
-                                _authenticationService.SignIn(customer, true);
+                            _authenticationService.SignIn(customer, true);
                         }
                     }
 

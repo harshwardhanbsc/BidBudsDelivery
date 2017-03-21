@@ -22,14 +22,16 @@
                         @if (Model.ShowProductImages)
                         {
                             <div class="picture">
-                                <a href="@Url.RouteUrl("Product", new { SeName = item.ProductSeName })" title="@item.Picture.Title">
+                                @*<a href="@Url.RouteUrl("Product", new { SeName = item.ProductSeName })" title="@item.Picture.Title">*@
+                                <a>
                                     <img alt="@item.Picture.AlternateText" src="@item.Picture.ImageUrl" title="@item.Picture.Title" />
                                 </a>
                             </div>
                         }
                         <div class="product">
                             <div class="name">
-                                <a href="@Url.RouteUrl("Product", new { SeName = item.ProductSeName })">@item.ProductName</a>
+                                @*<a href="@Url.RouteUrl("Product", new { SeName = item.ProductSeName })">*@
+                                <a>@item.ProductName</a>
                             </div>
                             @if (!String.IsNullOrEmpty(item.AttributeInfo))
                             {
@@ -48,7 +50,7 @@
                 @if (Model.DisplayShoppingCartButton)
                 {
                     <input type="button" value="@T("ShoppingCart.Mini.ViewCart")" class="button-1 cart-button" onclick="setLocation('@(Url.RouteUrl("ShoppingCart"))')" />
-                    
+
                 }
                 @if (Model.DisplayCheckoutButton)
                 {

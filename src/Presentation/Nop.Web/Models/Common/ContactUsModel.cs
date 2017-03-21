@@ -14,8 +14,8 @@ namespace Nop.Web.Models.Common
         public string Email { get; set; }
 
         [AllowHtml]
-        [NopResourceDisplayName("ContactUs.Subject")]
-        public string Subject { get; set; }
+        [NopResourceDisplayName("ContactUs.ContactNo")]
+        public string ContactNo { get; set; }
         public bool SubjectEnabled { get; set; }
 
         [AllowHtml]

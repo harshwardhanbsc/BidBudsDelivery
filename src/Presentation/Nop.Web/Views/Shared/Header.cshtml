@@ -1,23 +1,58 @@
-﻿<div class="header">
-    @Html.Widget("header")
-    <div class="header-upper">
-        <div class="header-selectors-wrapper">
-            @Html.Action("TaxTypeSelector", "Common")
-            @Html.Action("CurrencySelector", "Common")
-            @Html.Action("LanguageSelector", "Common")
-            @Html.Widget("header_selectors")
+﻿@*<div class="header">
+        @Html.Widget("header")
+        <div class="header-upper">
+            <div class="header-selectors-wrapper">
+                @Html.Action("TaxTypeSelector", "Common")
+                @Html.Action("CurrencySelector", "Common")
+                @Html.Action("LanguageSelector", "Common")
+                @Html.Widget("header_selectors")
+            </div>
+            <div class="header-links-wrapper">
+                @Html.Action("HeaderLinks", "Common")
+                @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+            </div>
         </div>
-        <div class="header-links-wrapper">
-            @Html.Action("HeaderLinks", "Common")
-            @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+        <div class="header-lower">
+            <div class="header-logo">
+                @Html.Action("Logo", "Common")
+            </div>
+            <div class="search-box store-search-box">
+                @Html.Action("SearchBox", "Catalog")
+            </div>
         </div>
-    </div>
-    <div class="header-lower">
-        <div class="header-logo">
+    </div>*@
+<!-- Header -->
+<header class="header">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 logodiv">
+        @*<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>*@
+        <div class="logo">
             @Html.Action("Logo", "Common")
         </div>
-        <div class="search-box store-search-box">
-            @Html.Action("SearchBox", "Catalog")
-        </div>
     </div>
-</div>
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+        <nav class="navbar navbar-default">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+                @Html.Action("HeaderLinks", "Common")
+                @Html.Action("FlyoutShoppingCart", "ShoppingCart")
+                @*<ul class="nav navbar-nav">
+                    <li><a href="#" data-toggle="modal" data-target="#loginregister">Login </a></li>
+                    
+                </ul>*@
+
+            </div><!-- /.navbar-collapse -->
+
+        </nav>
+        <div class="topctn">@T("Site.ContactNo").Text</div>
+    </div>
+</header>

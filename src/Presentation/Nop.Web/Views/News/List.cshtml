@@ -1,47 +1,47 @@
 ﻿@model NewsItemListModel
 @using Nop.Web.Models.News;
 @{
-    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+    Layout = "~/Views/Shared/_ColumnsOne.cshtml";
 
     //title
-    Html.AddTitleParts(T("PageTitle.NewsArchive").Text);
+    Html.AddTitleParts("Questions");
     //page class
     Html.AppendPageCssClassParts("html-news-list-page");
 }
-<div class="page news-list-page">
-    <div class="page-title">
-        <a href="@Url.RouteUrl("NewsRSS", new { languageId = Model.WorkingLanguageId })" class="link-rss" title="@T("News.RSS.Hint")">@T("News.RSS")</a>
-        <h1>@T("News")</h1>
+
+<div class="header-section">
+    <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" />
+    <div class="headerbox">
+        <h2>Questions</h2>
     </div>
-    <div class="page-body">
-        @Html.Widget("newslist_page_before_items")
-        <div class="news-items">
-            @foreach (var item in Model.NewsItems)
-            {
-                <div class="news-item">
-                    <div class="news-head">
-                        <a class="news-title" href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })">@item.Title</a>
-                        <span class="news-date">-@item.CreatedOn.ToString("D")</span>
+</div>
+<div class="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        @foreach (var item in Model.NewsItems)
+                        {
+                            var index = Model.NewsItems.IndexOf(item);
+                            <div class="panel-heading" role="tab" id="heading@index">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse@index" aria-expanded="true">
+                                        @item.Title
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse@index" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    @Html.Raw(item.Full);
+                                </div>
+                            </div>
+                        }
                     </div>
-                    <div class="news-body">
-                        @Html.Raw(item.Short)
-                    </div>
-                    <div class="buttons">
-                        <a href="@Url.RouteUrl("NewsItem", new { SeName = item.SeName })" class="read-more">@T("News.MoreInfo")</a>
-                    </div>
-                    @Html.Widget("newslist_page_inside_item", item.Id)
                 </div>
-            }
-        </div>
-        @{
-            var pager = Html.Pager(Model.PagingFilteringContext).QueryParam("pagenumber");
-        }
-        @if (!pager.IsEmpty())
-        {
-            <div class="pager">
-                @pager
+
+
             </div>
-        }
-        @Html.Widget("newslist_page_after_items")
+        </div>
     </div>
 </div>

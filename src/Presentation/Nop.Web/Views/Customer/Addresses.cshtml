@@ -9,6 +9,15 @@
     Html.AppendPageCssClassParts("html-account-page");
     Html.AppendPageCssClassParts("html-address-list-page");
 }
+@section header
+{
+    <div class="header-section">
+        <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" />
+        <div class="headerbox">
+            <h2>@T("Account.MyAccount") - @T("Account.CustomerAddresses")</h2>
+        </div>
+    </div>
+}
 @section left
 {
     @Html.Action("CustomerNavigation", "Customer", new { selectedTabId = CustomerNavigationEnum.Addresses })
@@ -36,20 +45,20 @@
                                     @address.FirstName @address.LastName
                                 </li>
                                 <li class="email">
-                                    @Html.LabelFor(model => model.Addresses[i].Email, new {}, ":")
+                                    @Html.LabelFor(model => model.Addresses[i].Email, new { }, ":")
                                     @address.Email
                                 </li>
                                 @if (address.PhoneEnabled)
                                 {
                                     <li class="phone">
-                                        @Html.LabelFor(model => model.Addresses[i].PhoneNumber, new {}, ":")
+                                        @Html.LabelFor(model => model.Addresses[i].PhoneNumber, new { }, ":")
                                         @address.PhoneNumber
                                     </li>
                                 }
                                 @if (address.FaxEnabled)
                                 {
                                     <li class="fax">
-                                        @Html.LabelFor(model => model.Addresses[i].FaxNumber, new {}, ":")
+                                        @Html.LabelFor(model => model.Addresses[i].FaxNumber, new { }, ":")
                                         @address.FaxNumber
                                     </li>
                                 }
@@ -115,8 +124,8 @@
                                 }
                             </ul>
                             <div class="buttons">
-                                <input type="button" class="button-2 edit-address-button" onclick="location.href = '@(Url.RouteUrl("CustomerAddressEdit", new {addressId = address.Id}))'" value="@T("Common.Edit")"/>
-                                <input type="button" class="button-2 delete-address-button" onclick="deletecustomeraddress(@(address.Id))" value="@T("Common.Delete")"/>
+                                <input type="button" class="button-2 edit-address-button" onclick="location.href = '@(Url.RouteUrl("CustomerAddressEdit", new {addressId = address.Id}))'" value="@T("Common.Edit")" />
+                                <input type="button" class="button-2 delete-address-button" onclick="deletecustomeraddress(@(address.Id))" value="@T("Common.Delete")" />
                             </div>
                         </div>
                     }
@@ -135,10 +144,10 @@
                                 url: '@Url.Action("AddressDelete", "Customer")',
                                 data: postData,
                                 dataType: 'json',
-                                success: function(data) {
+                                success: function (data) {
                                     location.href = data.redirect;
                                 },
-                                error: function(xhr, ajaxOptions, thrownError) {
+                                error: function (xhr, ajaxOptions, thrownError) {
                                     alert('Failed to delete');
                                 }
                             });

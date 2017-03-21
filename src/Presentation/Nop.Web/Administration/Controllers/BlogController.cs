@@ -144,23 +144,16 @@ namespace Nop.Admin.Controllers
             if (!_permissionService.Authorize(StandardPermissionProvider.ManageBlog))
                 return AccessDeniedView();
 
-            var model = new BlogPostListModel();
-
-            //stores
-            model.AvailableStores.Add(new SelectListItem { Text = _localizationService.GetResource("Admin.Common.All"), Value = "0" });
-            foreach (var store in _storeService.GetAllStores())
-                model.AvailableStores.Add(new SelectListItem { Text = store.Name, Value = store.Id.ToString() });
-
-            return View(model);
+			return View();
 		}
 
 		[HttpPost]
-        public virtual ActionResult List(DataSourceRequest command, BlogPostListModel model)
+        public virtual ActionResult List(DataSourceRequest command)
         {
             if (!_permissionService.Authorize(StandardPermissionProvider.ManageBlog))
                 return AccessDeniedKendoGridJson();
 
-            var blogPosts = _blogService.GetAllBlogPosts(model.SearchStoreId, 0, null, null, command.Page - 1, command.PageSize, true);
+            var blogPosts = _blogService.GetAllBlogPosts(0, 0, null, null, command.Page - 1, command.PageSize, true);
             var gridModel = new DataSourceResult
             {
                 Data = blogPosts.Select(x =>

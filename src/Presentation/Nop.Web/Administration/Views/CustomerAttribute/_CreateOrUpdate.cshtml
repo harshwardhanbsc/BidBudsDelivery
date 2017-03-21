@@ -51,14 +51,14 @@
 
         function toggleAttributeControlType() {
             var selectedAttributeControlTypeId = $("#@Html.FieldIdFor(model => model.AttributeControlTypeId)").val();
-           
             //values
             if (selectedAttributeControlTypeId == @(((int) AttributeControlType.DropdownList).ToString()) ||
                 selectedAttributeControlTypeId == @(((int) AttributeControlType.RadioList).ToString()) ||
                 selectedAttributeControlTypeId == @(((int) AttributeControlType.Checkboxes).ToString()) ||
                 selectedAttributeControlTypeId == @(((int) AttributeControlType.ColorSquares).ToString()) ||
                 selectedAttributeControlTypeId == @(((int) AttributeControlType.ImageSquares).ToString()) ||
-                selectedAttributeControlTypeId == @(((int) AttributeControlType.ReadonlyCheckboxes).ToString())) {
+                selectedAttributeControlTypeId == @(((int) AttributeControlType.ReadonlyCheckboxes).ToString()) ||
+                selectedAttributeControlTypeId == @(((int) AttributeControlType.FileUpload).ToString())) {
                  $('[data-tab-name=tab-values]').show();
             } else {
                 $('[data-tab-name=tab-values]').hide();
@@ -113,7 +113,7 @@
                             var attributeControlTypes = ((AttributeControlType)Model.AttributeControlTypeId)
                                 .ToSelectList(valuesToExclude:
                                 //these attributes don't support some control types
-                                new[] { (int)AttributeControlType.FileUpload, (int)AttributeControlType.Datepicker, (int)AttributeControlType.ColorSquares, (int)AttributeControlType.ImageSquares });
+                                new[] { (int)AttributeControlType.Datepicker, (int)AttributeControlType.ColorSquares, (int)AttributeControlType.ImageSquares });
                         }
                         @Html.NopDropDownListFor(model => model.AttributeControlTypeId, attributeControlTypes)
                         @Html.ValidationMessageFor(model => model.AttributeControlTypeId)

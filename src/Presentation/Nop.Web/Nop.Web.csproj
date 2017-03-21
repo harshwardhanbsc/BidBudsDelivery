@@ -74,12 +74,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation, Version=6.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FluentValidation.6.4.0\lib\Net45\FluentValidation.dll</HintPath>
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="FluentValidation.Mvc, Version=6.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FluentValidation.MVC5.6.4.0\lib\Net45\FluentValidation.Mvc.dll</HintPath>
+    <Reference Include="FluentValidation.Mvc, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.MVC5.6.2.1.0\lib\Net45\FluentValidation.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MaxMind.Db, Version=2.0.0.0, Culture=neutral, PublicKeyToken=66afa4cc5ae853ac, processorArchitecture=MSIL">
@@ -123,8 +123,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.RedisSessionStateProvider, Version=2.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Web.RedisSessionStateProvider.2.2.3\lib\net40\Microsoft.Web.RedisSessionStateProvider.dll</HintPath>
+    <Reference Include="Microsoft.Web.RedisSessionStateProvider, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.RedisSessionStateProvider.2.2.2\lib\net40\Microsoft.Web.RedisSessionStateProvider.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MiniProfiler, Version=3.2.0.157, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
@@ -203,7 +203,11 @@
     </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <HintPath>bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc.Extensions, Version=1.1.0.6, Culture=neutral, PublicKeyToken=d631f4e4b226a032, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Web.Mvc.Extensions.1.1.1.2\lib\net45\System.Web.Mvc.Extensions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -627,6 +631,54 @@
     <Content Include="Content\samples\product_WomenTShirt.jpg" />
     <Content Include="Content\samples\p_attribute_print_1.jpg" />
     <Content Include="Content\samples\p_attribute_print_2.jpg" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.AspNet.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.AspNet.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.Core.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.Core.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OAuth.Consumer.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OAuth.Consumer.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OAuth.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OAuth.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OpenId.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OpenId.RelyingParty.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OpenId.RelyingParty.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\DotNetOpenAuth.OpenId.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\Mono.Math.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\Mono.Math.xml" />
+    <Content Include="Plugins\ExternalAuth.Facebook\Org.Mentalis.Security.Cryptography.dll" />
+    <Content Include="Plugins\ExternalAuth.Facebook\Org.Mentalis.Security.Cryptography.xml" />
+    <Content Include="Plugins\Payments.PayPalDirect\PayPal.dll" />
+    <Content Include="Plugins\Payments.PayPalDirect\PayPal.xml" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\init.js" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\jquery.nivo.slider.js" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\jquery.nivo.slider.pack.js" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\license.txt" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\nivo-slider.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\bar\arrows.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\bar\bar.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\bar\bullets.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\bar\loading.gif" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\dark\arrows.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\dark\bullets.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\dark\dark.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\dark\loading.gif" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\default\arrows.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\default\bullets.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\default\default.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\default\loading.gif" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\light\arrows.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\light\bullets.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\light\light.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\nivo-slider\themes\light\loading.gif" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\simplemodal\css\basic.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\simplemodal\css\basic_ie.css" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\simplemodal\img\basic\x.png" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Content\simplemodal\jquery.simplemodal.1.4.3.min.js" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Description.txt" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Nop.Plugin.Widgets.AhsenSlider.dll" />
+    <Content Include="Plugins\Widgets.AhsenSlider\Nop.Plugin.Widgets.AhsenSlider.pdb" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\fineuploader\edit.gif" />
     <Content Include="Scripts\fineuploader\fineuploader-4.2.2.css" />
     <Content Include="Scripts\fineuploader\fineuploader-4.2.2.min.css" />
@@ -641,6 +693,7 @@
     <Content Include="Content\samples\product_IfYouWait_1.zip" />
     <Content Include="Content\samples\product_NightVision_1.zip" />
     <Content Include="Content\samples\product_ScienceAndFaith_1.zip" />
+    <None Include="Properties\PublishProfiles\File System.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\fineuploader\iframe.xss.response-4.2.2.js" />
     <Content Include="Scripts\fineuploader\jquery.fineuploader-4.2.2.js" />
@@ -654,63 +707,138 @@
     <Content Include="Scripts\jquery.magnific-popup.js" />
     <Content Include="Scripts\jquery.magnific-popup.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\layerslider\css\blank.gif" />
+    <Content Include="Scripts\layerslider\css\layerslider.css" />
+    <Content Include="Scripts\layerslider\js\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="Scripts\layerslider\js\layerslider.transitions.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\revolution-slider\assets\coloredbg.png" />
+    <Content Include="Scripts\revolution-slider\assets\gridtile.png" />
+    <Content Include="Scripts\revolution-slider\assets\gridtile_3x3.png" />
+    <Content Include="Scripts\revolution-slider\assets\gridtile_3x3_white.png" />
+    <Content Include="Scripts\revolution-slider\assets\gridtile_white.png" />
+    <Content Include="Scripts\revolution-slider\assets\loader.gif" />
+    <Content Include="Scripts\revolution-slider\css\closedhand.cur" />
+    <Content Include="Scripts\revolution-slider\css\layers.css" />
+    <Content Include="Scripts\revolution-slider\css\navigation.css" />
+    <Content Include="Scripts\revolution-slider\css\openhand.cur" />
+    <Content Include="Scripts\revolution-slider\css\settings.css" />
+    <Content Include="Scripts\revolution-slider\fonts\revicons\revicons90c6.svg" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.actions.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.carousel.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.kenburn.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.layeranimation.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.migration.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.navigation.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.parallax.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.slideanims.min.js" />
+    <Content Include="Scripts\revolution-slider\js\extensions\revolution.extension.video.min.js" />
+    <Content Include="Scripts\revolution-slider\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Scripts\revolution-slider\js\jquery.themepunch.tools.min.js" />
     <Content Include="Scripts\selectivizr.min.js" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\revolution-slider\fonts\revicons\revicons90c6.eot" />
+    <Content Include="Scripts\revolution-slider\fonts\revicons\revicons90c6.ttf" />
+    <Content Include="Scripts\revolution-slider\fonts\revicons\revicons90c6.woff" />
     <None Include="Scripts\_references.js" />
-    <Content Include="Themes\DefaultClean\Content\css\ie8.css" />
-    <Content Include="Themes\DefaultClean\Content\css\styles.css" />
-    <Content Include="Themes\DefaultClean\Content\css\styles.rtl.css" />
-    <Content Include="Themes\DefaultClean\Content\images\ajax-loader-small.gif" />
-    <Content Include="Themes\DefaultClean\Content\images\back-button.png" />
-    <Content Include="Themes\DefaultClean\Content\images\calendar-next.png" />
-    <Content Include="Themes\DefaultClean\Content\images\calendar-prev.png" />
-    <Content Include="Themes\DefaultClean\Content\images\close.png" />
-    <Content Include="Themes\DefaultClean\Content\images\compare-button.png" />
-    <Content Include="Themes\DefaultClean\Content\images\details.png" />
-    <Content Include="Themes\DefaultClean\Content\images\discontinued-product-icon.png" />
-    <Content Include="Themes\DefaultClean\Content\images\download-button.png" />
-    <Content Include="Themes\DefaultClean\Content\images\edit.png" />
-    <Content Include="Themes\DefaultClean\Content\images\edit_.png" />
-    <Content Include="Themes\DefaultClean\Content\images\email-button.png" />
-    <Content Include="Themes\DefaultClean\Content\images\first.png" />
-    <Content Include="Themes\DefaultClean\Content\images\ie_warning.jpg" />
-    <Content Include="Themes\DefaultClean\Content\images\last.png" />
-    <Content Include="Themes\DefaultClean\Content\images\loading.gif" />
-    <Content Include="Themes\DefaultClean\Content\images\logo.png" />
-    <Content Include="Themes\DefaultClean\Content\images\menu-icon.png" />
-    <Content Include="Themes\DefaultClean\Content\images\move.png" />
-    <Content Include="Themes\DefaultClean\Content\images\new.png" />
-    <Content Include="Themes\DefaultClean\Content\images\next.png" />
-    <Content Include="Themes\DefaultClean\Content\images\pointer.png" />
-    <Content Include="Themes\DefaultClean\Content\images\prev.png" />
-    <Content Include="Themes\DefaultClean\Content\images\rating1.png" />
-    <Content Include="Themes\DefaultClean\Content\images\rating2.png" />
-    <Content Include="Themes\DefaultClean\Content\images\remove.png" />
-    <Content Include="Themes\DefaultClean\Content\images\remove_.png" />
-    <Content Include="Themes\DefaultClean\Content\images\reply.png" />
-    <Content Include="Themes\DefaultClean\Content\images\retry.png" />
-    <Content Include="Themes\DefaultClean\Content\images\return.png" />
-    <Content Include="Themes\DefaultClean\Content\images\rss.png" />
-    <Content Include="Themes\DefaultClean\Content\images\shipping.png" />
-    <Content Include="Themes\DefaultClean\Content\images\shopping-bag.png" />
-    <Content Include="Themes\DefaultClean\Content\images\social-sprite.png" />
-    <Content Include="Themes\DefaultClean\Content\images\subscribe-button.png" />
-    <Content Include="Themes\DefaultClean\Content\images\toggle-black.png" />
-    <Content Include="Themes\DefaultClean\Content\images\toggle-gray.png" />
-    <Content Include="Themes\DefaultClean\Content\images\toggle-white.png" />
-    <Content Include="Themes\DefaultClean\Content\images\topic-type1.png" />
-    <Content Include="Themes\DefaultClean\Content\images\topic-type2.png" />
-    <Content Include="Themes\DefaultClean\Content\images\topic-type3.png" />
-    <Content Include="Themes\DefaultClean\Content\images\view-grid.png" />
-    <Content Include="Themes\DefaultClean\Content\images\view-list.png" />
-    <Content Include="Themes\DefaultClean\Content\images\vote-down.png" />
-    <Content Include="Themes\DefaultClean\Content\images\vote-down-selected.png" />
-    <Content Include="Themes\DefaultClean\Content\images\vote-up.png" />
-    <Content Include="Themes\DefaultClean\Content\images\vote-up-selected.png" />
-    <Content Include="Themes\DefaultClean\Content\images\watch.png" />
-    <Content Include="Themes\DefaultClean\Content\images\wishlist-button.png" />
-    <Content Include="Themes\DefaultClean\preview.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\css\bootstrap.min.css" />
+    <Content Include="Themes\BigBudsTheme\Content\css\font-awesome.min.css" />
+    <Content Include="Themes\BigBudsTheme\Content\css\fonts\flexslider-icon-2.html" />
+    <Content Include="Themes\BigBudsTheme\Content\css\fonts\flexslider-icon-3.html" />
+    <Content Include="Themes\BigBudsTheme\Content\css\fonts\flexslider-icon-4.html" />
+    <Content Include="Themes\BigBudsTheme\Content\css\fonts\flexslider-icon.html" />
+    <Content Include="Themes\BigBudsTheme\Content\css\fonts\flexslider-icond41d.html" />
+    <Content Include="Themes\BigBudsTheme\Content\css\style-main.css" />
+    <Content Include="Themes\BigBudsTheme\Content\images\1.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\ajax-loader-small.gif" />
+    <Content Include="Themes\BigBudsTheme\Content\images\app.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\back-button.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\bud.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\calendar-next.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\calendar-prev.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\Candies.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\candies.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\capsule.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\cart.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\chocolatebar.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\chocolatebar.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\close.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\compare-button.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\details.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\discontinued-product-icon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\download-button.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\edit.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\edit_.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\email-button.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\epens.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\fbicon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\first.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\googleicon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\Google_Plus.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\GreenCrackGod.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\gummes.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\gummies.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\hempstar.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\ie_warning.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\large-lolipop.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\last.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\LemonSkunk.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\linkedinicon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\loading.gif" />
+    <Content Include="Themes\BigBudsTheme\Content\images\logo.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\lolipop-large.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\lolipop-small.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\masterkush.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\menu-icon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\move.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\new.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\next.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\pattern1.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\pattern2.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\pattern3.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\Pineappleexpress.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\PinkKush.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\pinteresticon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\pointer.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\prev.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\rating1.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\rating2.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\remove.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\remove_.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\reply.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\retry.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\return.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\rss.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\shadow-overlay.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\shater.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\shipping.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\shopping-bag.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\slide1.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\slide2.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\slide3.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\small-lolipop.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\social-facebook.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\social-sprite.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\subscribe-button.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\toggle-black.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\toggle-gray.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\toggle-white.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\topic-type1.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\topic-type2.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\topic-type3.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\twittericon.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\vid-poster.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\view-grid.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\view-list.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\ViolatorKush.jpg" />
+    <Content Include="Themes\BigBudsTheme\Content\images\vote-down-selected.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\vote-down.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\vote-up-selected.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\vote-up.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\watch.png" />
+    <Content Include="Themes\BigBudsTheme\Content\images\wishlist-button.png" />
+    <Content Include="Themes\BigBudsTheme\preview.jpg" />
     <Content Include="Content\Images\default-avatar.jpg" />
     <Content Include="Content\Images\flags\ad.png" />
     <Content Include="Content\Images\flags\ae.png" />
@@ -972,7 +1100,60 @@
     <Content Include="Scripts\public.accordion.js" />
     <Content Include="Scripts\public.onepagecheckout.js" />
     <Content Include="Scripts\public.common.js" />
+    <Content Include="Themes\DefaultClean\Content\css\ie8.css" />
     <Content Include="Themes\DefaultClean\Content\css\print.css" />
+    <Content Include="Themes\DefaultClean\Content\css\styles.css" />
+    <Content Include="Themes\DefaultClean\Content\css\styles.rtl.css" />
+    <Content Include="Themes\DefaultClean\Content\images\ajax-loader-small.gif" />
+    <Content Include="Themes\DefaultClean\Content\images\back-button.png" />
+    <Content Include="Themes\DefaultClean\Content\images\calendar-next.png" />
+    <Content Include="Themes\DefaultClean\Content\images\calendar-prev.png" />
+    <Content Include="Themes\DefaultClean\Content\images\close.png" />
+    <Content Include="Themes\DefaultClean\Content\images\compare-button.png" />
+    <Content Include="Themes\DefaultClean\Content\images\details.png" />
+    <Content Include="Themes\DefaultClean\Content\images\discontinued-product-icon.png" />
+    <Content Include="Themes\DefaultClean\Content\images\download-button.png" />
+    <Content Include="Themes\DefaultClean\Content\images\edit.png" />
+    <Content Include="Themes\DefaultClean\Content\images\edit_.png" />
+    <Content Include="Themes\DefaultClean\Content\images\email-button.png" />
+    <Content Include="Themes\DefaultClean\Content\images\first.png" />
+    <Content Include="Themes\DefaultClean\Content\images\ie_warning.jpg" />
+    <Content Include="Themes\DefaultClean\Content\images\last.png" />
+    <Content Include="Themes\DefaultClean\Content\images\loading.gif" />
+    <Content Include="Themes\DefaultClean\Content\images\logo.png" />
+    <Content Include="Themes\DefaultClean\Content\images\menu-icon.png" />
+    <Content Include="Themes\DefaultClean\Content\images\move.png" />
+    <Content Include="Themes\DefaultClean\Content\images\new.png" />
+    <Content Include="Themes\DefaultClean\Content\images\next.png" />
+    <Content Include="Themes\DefaultClean\Content\images\pointer.png" />
+    <Content Include="Themes\DefaultClean\Content\images\prev.png" />
+    <Content Include="Themes\DefaultClean\Content\images\rating1.png" />
+    <Content Include="Themes\DefaultClean\Content\images\rating2.png" />
+    <Content Include="Themes\DefaultClean\Content\images\remove.png" />
+    <Content Include="Themes\DefaultClean\Content\images\remove_.png" />
+    <Content Include="Themes\DefaultClean\Content\images\reply.png" />
+    <Content Include="Themes\DefaultClean\Content\images\retry.png" />
+    <Content Include="Themes\DefaultClean\Content\images\return.png" />
+    <Content Include="Themes\DefaultClean\Content\images\rss.png" />
+    <Content Include="Themes\DefaultClean\Content\images\shipping.png" />
+    <Content Include="Themes\DefaultClean\Content\images\shopping-bag.png" />
+    <Content Include="Themes\DefaultClean\Content\images\social-sprite.png" />
+    <Content Include="Themes\DefaultClean\Content\images\subscribe-button.png" />
+    <Content Include="Themes\DefaultClean\Content\images\toggle-black.png" />
+    <Content Include="Themes\DefaultClean\Content\images\toggle-gray.png" />
+    <Content Include="Themes\DefaultClean\Content\images\toggle-white.png" />
+    <Content Include="Themes\DefaultClean\Content\images\topic-type1.png" />
+    <Content Include="Themes\DefaultClean\Content\images\topic-type2.png" />
+    <Content Include="Themes\DefaultClean\Content\images\topic-type3.png" />
+    <Content Include="Themes\DefaultClean\Content\images\view-grid.png" />
+    <Content Include="Themes\DefaultClean\Content\images\view-list.png" />
+    <Content Include="Themes\DefaultClean\Content\images\vote-down-selected.png" />
+    <Content Include="Themes\DefaultClean\Content\images\vote-down.png" />
+    <Content Include="Themes\DefaultClean\Content\images\vote-up-selected.png" />
+    <Content Include="Themes\DefaultClean\Content\images\vote-up.png" />
+    <Content Include="Themes\DefaultClean\Content\images\watch.png" />
+    <Content Include="Themes\DefaultClean\Content\images\wishlist-button.png" />
+    <Content Include="Themes\DefaultClean\preview.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1029,9 +1210,43 @@
     <Content Include="Views\Vendor\Info.cshtml" />
     <Content Include="Views\Common\Logo.cshtml" />
     <Content Include="Views\Customer\EmailRevalidation.cshtml" />
+    <Content Include="Themes\DefaultClean\Views\Shared\Head.cshtml" />
+    <Content Include="Themes\DefaultClean\Views\Web.config" />
+    <Content Include="Themes\DefaultClean\theme.config" />
+    <Content Include="Views\Common\Product.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Plugins\bin\" />
+    <Folder Include="Plugins\DiscountRules.CustomerRoles\Views\" />
+    <Folder Include="Plugins\DiscountRules.HasOneProduct\Views\" />
+    <Folder Include="Plugins\ExchangeRate.EcbExchange\" />
+    <Folder Include="Plugins\ExternalAuth.Facebook\Content\Images\" />
+    <Folder Include="Plugins\ExternalAuth.Facebook\Views\" />
+    <Folder Include="Plugins\Feed.GoogleShopping\Content\" />
+    <Folder Include="Plugins\Feed.GoogleShopping\Views\" />
+    <Folder Include="Plugins\Payments.CheckMoneyOrder\Views\" />
+    <Folder Include="Plugins\Payments.Manual\Views\" />
+    <Folder Include="Plugins\Payments.PayPalDirect\Views\" />
+    <Folder Include="Plugins\Payments.PayPalStandard\Views\" />
+    <Folder Include="Plugins\Payments.PurchaseOrder\Views\" />
+    <Folder Include="Plugins\Pickup.PickupInStore\Views\" />
+    <Folder Include="Plugins\Shipping.AustraliaPost\Views\" />
+    <Folder Include="Plugins\Shipping.CanadaPost\Views\" />
+    <Folder Include="Plugins\Shipping.Fedex\Views\" />
+    <Folder Include="Plugins\Shipping.FixedOrByWeight\Views\" />
+    <Folder Include="Plugins\Shipping.UPS\Views\" />
+    <Folder Include="Plugins\Shipping.USPS\Views\" />
+    <Folder Include="Plugins\Tax.FixedOrByCountryStateZip\Views\" />
+    <Folder Include="Plugins\Widgets.GoogleAnalytics\Views\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Content\nivoslider\sample-images\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Content\nivoslider\themes\bar\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Content\nivoslider\themes\custom\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Content\nivoslider\themes\dark\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Content\nivoslider\themes\default\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Content\nivoslider\themes\light\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Scripts\" />
+    <Folder Include="Plugins\Widgets.NivoSlider\Views\" />
+    <Folder Include="Themes\BigBudsTheme\Content\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Libraries\Nop.Core\Nop.Core.csproj">
@@ -1052,8 +1267,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Themes\DefaultClean\theme.config" />
-    <Content Include="Themes\DefaultClean\Views\Web.config" />
+    <Content Include="Themes\BigBudsTheme\theme.config" />
+    <Content Include="Themes\BigBudsTheme\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Catalog\CategoryTemplate.ProductsInGridOrLines.cshtml" />
@@ -1210,7 +1425,7 @@
     <Content Include="Views\ShoppingCart\_ButtonPaymentMethod.cshtml" />
     <Content Include="Views\ShoppingCart\_OrderReviewData.cshtml" />
     <Content Include="Views\Common\StoreClosed.cshtml" />
-    <Content Include="Themes\DefaultClean\Views\Shared\Head.cshtml" />
+    <Content Include="Themes\BigBudsTheme\Views\Shared\Head.cshtml" />
     <Content Include="Views\Common\AdminHeaderLinks.cshtml" />
     <Content Include="Views\Common\PageNotFound.cshtml" />
     <Content Include="Views\Common\EuCookieLaw.cshtml" />
@@ -1241,11 +1456,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>15536</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2451/</IISUrl>
+          <IISUrl>http://localhost:15538/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -10,6 +10,15 @@
 }
 @using Nop.Web.Models.Customer
 @using Nop.Web.Models.Order;
+@section header
+{
+    <div class="header-section">
+        <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" />
+        <div class="headerbox">
+            <h2>@T("Account.MyAccount") - @T("Account.CustomerOrders")</h2>
+        </div>
+    </div>
+}
 @section left
 {
     @Html.Action("CustomerNavigation", "Customer", new { selectedTabId = CustomerNavigationEnum.Orders })
@@ -39,7 +48,6 @@
                                 <col />
                                 <col />
                                 <col />
-                                @if (canRetryRecurringOrders) { <col /> }
                                 <col />
                             </colgroup>
                             <thead>

@@ -9,6 +9,15 @@
     //page class
     Html.AppendPageCssClassParts("html-my-product-reviews-list-page");
 }
+@section header
+{
+    <div class="header-section">
+        <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" />
+        <div class="headerbox">
+            <h2>@T("Account.MyAccount") - @T("Account.CustomerProductReviews")</h2>
+        </div>
+    </div>
+}
 @section left
 {
     @Html.Action("CustomerNavigation", "Customer", new { selectedTabId = CustomerNavigationEnum.ProductReviews })

@@ -61,8 +61,13 @@
             <textarea id="@(controlId)" name="@(controlId)">@attribute.DefaultValue</textarea>
                 }
                 break;
+				case AttributeControlType. FileUpload:
+            {
+            <input id="@(controlId)" name="@(controlId)"  type="file" accept="image/*" class="form-control"/>
+			<!--<textarea id="@(controlId)" name="@(controlId)">@attribute.DefaultValue</textarea>-->
+                }
+                break;
             case AttributeControlType.Datepicker:
-            case AttributeControlType.FileUpload:
             case AttributeControlType.ColorSquares:
             case AttributeControlType.ImageSquares:
                 {

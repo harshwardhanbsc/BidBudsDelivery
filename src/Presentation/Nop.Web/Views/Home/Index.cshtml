@@ -1,23 +1,324 @@
 ﻿@{
     Layout = "~/Views/Shared/_ColumnsOne.cshtml";
 
-    //page class
-    Html.AppendPageCssClassParts("html-home-page");
+    ////page class
+    //Html.AppendPageCssClassParts("html-home-page");
 }
-<div class="page home-page">
-    <div class="page-body">
-        @Html.Widget("home_page_top")
-        @Html.Action("TopicBlock", "Topic", new { systemName = "HomePageText" })
-        @Html.Widget("home_page_before_categories")
-        @Html.Action("HomepageCategories", "Catalog")
-        @Html.Widget("home_page_before_products")
-        @Html.Action("HomepageProducts", "Product")
-        @Html.Widget("home_page_before_best_sellers")
-        @Html.Action("HomepageBestSellers", "Product")
-        @Html.Widget("home_page_before_news")
-        @Html.Action("HomePageNews", "News")
-        @Html.Widget("home_page_before_poll")
-        @Html.Action("HomePagePolls", "Poll")
-        @Html.Widget("home_page_bottom")
-    </div>
+<!-- Start main-content -->
+<div class="main-content">
+    <!-- Section: home -->
+    <section id="home" class="divider screenheight">
+        <div class="container-fluid p-0">
+
+            <!-- Slider Revolution Start -->
+            <div class="rev_slider_wrapper">
+                <div class="rev_slider" data-version="5.0">
+                    <ul>
+
+                        <!-- SLIDE 1 -->
+                        <li data-index="rs-1" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/Themes/BigBudsTheme/Content/images/slide1.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                            <!-- LAYERS -->
+                            <div class="width768">
+                                <div class="tp-caption Newspaper-Title-Centered tp-resizeme rs-parallaxlevel-4"
+                                     id="slide-3-layer-1"
+                                     data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['-140','-140','-140','-140']"
+                                     data-fontsize="['35']"
+                                     data-lineheight="['35']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                     data-transform_out="auto:auto;s:1000;"
+                                     data-mask_in="x:0px;y:0px;"
+                                     data-mask_out="x:0;y:0;"
+                                     data-start="1500"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     data-elementdelay="0.05"
+                                     style="z-index: 5; white-space: nowrap;">
+                                    CO<c>2</c> Critical Extration
+
+                                </div>
+                                <div class="tp-caption Newspaper-Title-Centered tp-resizeme rs-parallaxlevel-3"
+                                     id="slide-3-layer-2"
+                                     data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['-90','-90','-90','-90']"
+                                     data-fontsize="['30']"
+                                     data-lineheight="['30']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                     data-start="1500"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 6; white-space: nowrap;">
+                                    Pure THC & CBD Extracts
+
+                                </div>
+
+
+                                <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-2"
+                                     id="slide-3-layer-3"
+                                     data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['-50','-50','-50','-50']"
+                                     data-fontsize="['30']"
+                                     data-lineheight="['30']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                     data-start="1500"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 6; white-space: nowrap;">
+                                    Chemical Free Extraction
+                                </div>
+                                <div class="tp-caption NotGeneric-SubTitle tp-resizeme rs-parallaxlevel-2"
+                                     id="slide-3-layer-3"
+                                     data-x="['left','left','left','left']" data-hoffset="['30','30','30','30']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-fontsize="['30']"
+                                     data-lineheight="['30']"
+                                     data-width="none"
+                                     data-height="none"
+                                     data-whitespace="nowrap"
+                                     data-transform_idle="o:1;"
+                                     data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
+                                     data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                     data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;"
+                                     data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                     data-start="1500"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-responsive_offset="on"
+                                     style="z-index: 6; white-space: nowrap;">
+                                    Wide Selection of Delivery Options
+                                </div>
+                            </div>
+                            <div class="tp-caption  width768img tp-resizeme rs-parallaxlevel-5"
+                                 id="slide-3-layer-5"
+                                 data-x="['right','right','center','center']" data-hoffset="['0','0,'50','100']"
+                                 data-y="['middle','middle','middle','bottom']" data-voffset="['-70','-70','-70','-70']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:right;s:1500;e:Power3.easeOut;"
+                                 data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;"
+                                 data-start="2500"
+                                 data-responsive_offset="on"
+                                 style="z-index: 5;">
+                                <img alt="" src="~/Themes/BigBudsTheme/Content/images/app.png" alt="" width="636" height="441" data-ww="['600px','500px','400px','200px']" data-hh="['338px','281px','225px','113px']" data-no-retina>
+                            </div>
+                        </li>
+
+                        <!-- SLIDE 2 -->
+                        <li data-index="rs-2" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/Themes/BigBudsTheme/Content/images/slide2.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="~/Themes/BigBudsTheme/Content/images/slide2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-resizeme text-theme-colored"
+                                 id="rs-2-layer-1"
+                                 data-x="['center']"
+                                 data-hoffset="['0']"
+                                 data-y="['middle']"
+                                 data-voffset="['-115']"
+                                 data-fontsize="['30']"
+                                 data-lineheight="['70']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;s:500"
+                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 style="z-index: 7; white-space: nowrap; font-weight:600;">
+                                Master Kush Shatter
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption tp-resizeme text-center text-white font-montserrat"
+                                 id="rs-2-layer-2"
+                                 data-x="['center']"
+                                 data-hoffset="['0']"
+                                 data-y="['middle']"
+                                 data-voffset="['-40'']"
+                                 data-fontsize="['72','72','54','24']"
+                                 data-lineheight="['90']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;s:500"
+                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1400"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 style="z-index: 5; white-space: nowrap; font-weight:600;">
+                                High content THC
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption tp-resizeme text-center text-white"
+                                 id="rs-2-layer-3"
+                                 data-x="['center']"
+                                 data-hoffset="['0']"
+                                 data-y="['middle']"
+                                 data-voffset="['40']"
+                                 data-fontsize="['24']"
+                                 data-lineheight="['36']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;s:500"
+                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1800"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 style="z-index: 5; white-space: nowrap; font-weight:600;">
+                                We offer only the Hightest
+                            </div>
+                        </li>
+
+                        <!-- SLIDE 3 -->
+                        <li data-index="rs-3" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="~/Themes/BigBudsTheme/Content/images/slide3.jpg" data-rotate="0" data-saveperformance="off" data-title="Web Show" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="~/Themes/BigBudsTheme/Content/images/slide3.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-bgparallax="6" data-no-retina>
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption tp-resizeme text-theme-colored"
+                                 id="rs-1-layer-1"
+                                 data-x="['center']"
+                                 data-hoffset="['0']"
+                                 data-y="['middle']"
+                                 data-voffset="['-115']"
+                                 data-fontsize="['30']"
+                                 data-lineheight="['70']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;s:500"
+                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 style="z-index: 7; white-space: nowrap; font-weight:600;">
+                                Master Kush Shatter
+                            </div>
+
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption tp-resizeme text-center text-white font-montserrat"
+                                 id="rs-1-layer-2"
+                                 data-x="['center']"
+                                 data-hoffset="['0']"
+                                 data-y="['middle']"
+                                 data-voffset="['-40'']"
+                                 data-fontsize="['72','72','54','24']"
+                                 data-lineheight="['90']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;s:500"
+                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1400"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 style="z-index: 5; white-space: nowrap; font-weight:600;">
+                                High content THC
+                            </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption tp-resizeme text-center text-white"
+                                 id="rs-1-layer-3"
+                                 data-x="['center']"
+                                 data-hoffset="['0']"
+                                 data-y="['middle']"
+                                 data-voffset="['40']"
+                                 data-fontsize="['24']"
+                                 data-lineheight="['36']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;s:500"
+                                 data-transform_in="y:100;scaleX:1;scaleY:1;opacity:0;"
+                                 data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1800"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 style="z-index: 5; white-space: nowrap; font-weight:600;">
+                                We offer only the Hightest
+                            </div>
+                        </li>
+
+                    </ul>
+                </div><!-- end .rev_slider -->
+            </div>
+
+        </div>
+    </section>
+
+
+
 </div>
+<!-- end main-content -->
+<div class="clearfix"></div>
+
+@Html.Action("HomepageCategories", "Catalog")
+
+
+@*<div class="page home-page">
+    <div class="page-body">*@
+@*@Html.Widget("home_page_top")*@
+@*@Html.Action("TopicBlock", "Topic", new { systemName = "HomePageText" })
+    @Html.Widget("home_page_before_categories")
+    @Html.Action("HomepageCategories", "Catalog")
+    @Html.Widget("home_page_before_products")
+    @Html.Widget("home_page_before_best_sellers")
+    @Html.Action("HomepageBestSellers", "Product")
+    @Html.Widget("home_page_before_news")
+    @Html.Action("HomePageNews", "News")
+    @Html.Widget("home_page_before_poll")
+    @Html.Action("HomePagePolls", "Poll")
+    @Html.Widget("home_page_bottom")*@
+@*</div>
+    </div>*@
