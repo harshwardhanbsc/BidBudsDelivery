@@ -5,52 +5,29 @@
 @Html.Partial("_Notifications")
 @Html.Action("JavaScriptDisabledWarning", "Common")
 @Html.Partial("OldInternetExplorerWarning")
-<div id="wrapper">
-    <!-- preloader -->
+
+<div class="master-wrapper-page">
+    @Html.Action("AdminHeaderLinks", "Common")
     @Html.Partial("Header")
-    @if (IsSectionDefined("Breadcrumb"))
-            {
-        @RenderSection("Breadcrumb")
-    }
-    @RenderBody()
-
-
-    <!-- end wrapper -->
-
-</div>
-<footer>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <p>Copyright © 2017 Bigbudsdelivery. All rights reserved.</p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                @Html.Action("Social", "Common")
-            </div>
-        </div>
+    <script type="text/javascript">
+        AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
+    </script>
+    <div class="header-menu">
+        @Html.Action("TopMenu", "Catalog")
     </div>
-</footer>
+    <div class="master-wrapper-content">
+        @Html.Widget("content_before")
 
-
-@*<div class="master-wrapper-page">
-        @Html.Action("AdminHeaderLinks", "Common")
-        @Html.Partial("Header")
-        <script type="text/javascript">
-            AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart');
-        </script>
-        <div class="header-menu">
-            @Html.Action("TopMenu", "Catalog")
+        @if (IsSectionDefined("Breadcrumb"))
+        {
+            @RenderSection("Breadcrumb") 
+        }
+        <div class="master-column-wrapper">
+            @RenderBody()
         </div>
-        <div class="master-wrapper-content">
-            @Html.Widget("content_before")
-
-
-            <div class="master-column-wrapper">
-                @RenderBody()
-            </div>
-            @Html.Widget("content_after")
-        </div>
-        @Html.Action("Footer", "Common")
-    </div>*@
+        @Html.Widget("content_after")
+    </div>
+    @Html.Action("Footer", "Common")
+</div>
 @Html.Action("EuCookieLaw", "Common")
 @Html.Widget("body_end_html_tag_before")

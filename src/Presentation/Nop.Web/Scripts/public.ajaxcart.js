@@ -107,19 +107,11 @@ var AjaxCart = {
                     displayBarNotification(response.message, 'error', 0);
                 }
             }
-            if (response.redirect) {
-                location.href = response.redirect;
-                return true;
-            } else {
-                location.href = "/";
-            }
             return false;
         }
         if (response.redirect) {
             location.href = response.redirect;
             return true;
-        } else {
-            location.href = "/";
         }
         return false;
     },

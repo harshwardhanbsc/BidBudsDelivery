@@ -12,9 +12,8 @@
     @Html.AntiForgeryToken()
     <div class="content-header clearfix">
         <h1 class="pull-left">
-            Edit Question item details@*@T("Admin.ContentManagement.News.NewsItems.EditNewsItemDetails")*@ - @Model.Title
-            <small><i class="fa fa-arrow-circle-left"></i>
-            @Html.ActionLink(@*T("Admin.ContentManagement.News.NewsItems.BackToList").Text*@"back to questions item list", "List")</small>
+            @T("Admin.ContentManagement.News.NewsItems.EditNewsItemDetails") - @Model.Title
+            <small><i class="fa fa-arrow-circle-left"></i>@Html.ActionLink(T("Admin.ContentManagement.News.NewsItems.BackToList").Text, "List")</small>
         </h1>
         <div class="pull-right">
             <button type="submit" name="save" class="btn bg-blue">

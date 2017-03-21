@@ -34,20 +34,20 @@
 <div class="edit-address">
     <div class="inputs">
         @Html.LabelFor(model => model.FirstName, new { }, ":")
-        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+            @Html.EditorFor(model => model.FirstName)
         @Html.RequiredHint()
         @Html.ValidationMessageFor(model => model.FirstName)
     </div>
     <div class="inputs">
         @Html.LabelFor(model => model.LastName, new { }, ":")
-        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+            @Html.EditorFor(model => model.LastName)
         @Html.RequiredHint()
         @Html.ValidationMessageFor(model => model.LastName)
 
     </div>
     <div class="inputs">
         @Html.LabelFor(model => model.Email, new { }, ":")
-        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+            @Html.EditorFor(model => model.Email)
         @Html.RequiredHint()
         @Html.ValidationMessageFor(model => model.Email)
     </div>
@@ -55,7 +55,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.Company, new { }, ":")
-            @Html.TextBoxFor(model => model.Company, new { @class = "form-control" })
+                @Html.EditorFor(model => model.Company)
             @if (Model.CompanyRequired)
             {
                 @Html.RequiredHint()
@@ -66,9 +66,9 @@
     @if (Model.CountryEnabled)
     {
         <div class="inputs">
-            @Html.LabelFor(model => model.CountryId, new { }, ":")@Html.RequiredHint()
-            @Html.DropDownListFor(model => model.CountryId, Model.AvailableCountries)
-
+            @Html.LabelFor(model => model.CountryId, new { }, ":")
+                @Html.DropDownListFor(model => model.CountryId, Model.AvailableCountries)
+            @Html.RequiredHint()
             @Html.ValidationMessageFor(model => model.CountryId)
         </div>
     }
@@ -77,7 +77,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.StateProvinceId, new { }, ":")
-            @Html.DropDownListFor(model => model.StateProvinceId, Model.AvailableStates)
+                @Html.DropDownListFor(model => model.StateProvinceId, Model.AvailableStates)
             <span id="states-loading-progress" style="display: none;" class="please-wait">@T("Common.Wait...")</span>
             @Html.ValidationMessageFor(model => model.StateProvinceId)
         </div>
@@ -86,7 +86,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.City, new { }, ":")
-            @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+                @Html.EditorFor(model => model.City)
 
             @if (Model.CityRequired)
             {
@@ -99,7 +99,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.Address1, new { }, ":")
-            @Html.TextBoxFor(model => model.Address1, new { @class = "form-control" })
+                @Html.EditorFor(model => model.Address1)
             @if (Model.StreetAddressRequired)
             {
                 @Html.RequiredHint()
@@ -111,7 +111,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.Address2, new { }, ":")
-            @Html.TextBoxFor(model => model.Address2, new { @class = "form-control" })
+                @Html.EditorFor(model => model.Address2)
             @if (Model.StreetAddress2Required)
             {
                 @Html.RequiredHint()
@@ -123,7 +123,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.ZipPostalCode, new { }, ":")
-            @Html.TextBoxFor(model => model.ZipPostalCode, new { @class = "form-control" })
+                @Html.EditorFor(model => model.ZipPostalCode)
             @if (Model.ZipPostalCodeRequired)
             {
                 @Html.RequiredHint()
@@ -135,7 +135,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.PhoneNumber, new { }, ":")
-            @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+                @Html.EditorFor(model => model.PhoneNumber)
             @if (Model.PhoneRequired)
             {
                 @Html.RequiredHint()
@@ -147,7 +147,7 @@
     {
         <div class="inputs">
             @Html.LabelFor(model => model.FaxNumber, new { }, ":")
-            @Html.TextBoxFor(model => model.FaxNumber, new { @class = "form-control" })
+                @Html.EditorFor(model => model.FaxNumber)
             @if (Model.FaxRequired)
             {
                 @Html.RequiredHint()

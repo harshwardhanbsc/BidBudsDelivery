@@ -13,11 +13,10 @@ namespace Nop.Web.Validators.Common
             RuleFor(x => x.Email).NotEmpty().WithMessage(localizationService.GetResource("ContactUs.Email.Required"));
             RuleFor(x => x.Email).EmailAddress().WithMessage(localizationService.GetResource("Common.WrongEmail"));
             RuleFor(x => x.FullName).NotEmpty().WithMessage(localizationService.GetResource("ContactUs.FullName.Required"));
-            RuleFor(x => x.ContactNo).NotEmpty().WithMessage(localizationService.GetResource("ContactUs.ContactNo.Required"));
-            //if (commonSettings.SubjectFieldOnContactUsForm)
-            //{
-            //    RuleFor(x => x.Subject).NotEmpty().WithMessage(localizationService.GetResource("ContactUs.Subject.Required"));
-            //}
+            if (commonSettings.SubjectFieldOnContactUsForm)
+            {
+                RuleFor(x => x.Subject).NotEmpty().WithMessage(localizationService.GetResource("ContactUs.Subject.Required"));
+            }
             RuleFor(x => x.Enquiry).NotEmpty().WithMessage(localizationService.GetResource("ContactUs.Enquiry.Required"));
         }}
 }

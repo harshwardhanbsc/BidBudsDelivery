@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Web.Mvc;
 using Nop.Core;
 using Nop.Core.Domain;
@@ -29,7 +28,6 @@ namespace Nop.Web.Controllers
     {
         #region Fields
 
-        private readonly ICatalogModelFactory _catalogModelFactory;
         private readonly ICommonModelFactory _commonModelFactory;
         private readonly ILanguageService _languageService;
         private readonly ICurrencyService _currencyService;
@@ -56,8 +54,7 @@ namespace Nop.Web.Controllers
 
         #region Constructors
 
-        public CommonController(ICatalogModelFactory catalogModelFactory,
-            ICommonModelFactory commonModelFactory,
+        public CommonController(ICommonModelFactory commonModelFactory,
             ILanguageService languageService,
             ICurrencyService currencyService,
             ILocalizationService localizationService,
@@ -78,7 +75,6 @@ namespace Nop.Web.Controllers
             CaptchaSettings captchaSettings,
             VendorSettings vendorSettings)
         {
-            this._catalogModelFactory = catalogModelFactory;
             this._commonModelFactory = commonModelFactory;
             this._languageService = languageService;
             this._currencyService = currencyService;
@@ -296,12 +292,12 @@ namespace Nop.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                string contact = model.ContactNo;
+                string subject = _commonSettings.SubjectFieldOnContactUsForm ? model.Subject : null;
                 string body = Core.Html.HtmlHelper.FormatText(model.Enquiry, false, true, false, false, false, false);
 
                 _workflowMessageService.SendContactUsMessage(_workContext.WorkingLanguage.Id,
-                    model.Email.Trim(), model.FullName, contact, body);
-
+                    model.Email.Trim(), model.FullName, subject, body);
+                
                 model.SuccessfullySent = true;
                 model.Result = _localizationService.GetResource("ContactUs.YourEnquiryHasBeenSent");
 
@@ -355,7 +351,7 @@ namespace Nop.Web.Controllers
 
                 _workflowMessageService.SendContactVendorMessage(vendor, _workContext.WorkingLanguage.Id,
                     model.Email.Trim(), model.FullName, subject, body);
-
+                
                 model.SuccessfullySent = true;
                 model.Result = _localizationService.GetResource("ContactVendor.YourEnquiryHasBeenSent");
 
@@ -384,7 +380,7 @@ namespace Nop.Web.Controllers
         {
             if (!_commonSettings.SitemapEnabled)
                 return RedirectToRoute("HomePage");
-
+            
             var siteMap = _commonModelFactory.PrepareSitemapXml(this.Url, id);
             return Content(siteMap, "text/xml");
         }
@@ -491,17 +487,6 @@ namespace Nop.Web.Controllers
             return View();
         }
 
-        //contact us page
-        [NopHttpsRequirement(SslRequirement.Yes)]
-        //available even when a store is closed
-        [StoreClosed(true)]
-        public virtual ActionResult Product()
-        {
-            var model = _catalogModelFactory.PrepareHomepageCategoryModels();
-            if (!model.Any())
-                return Content("");
-            return View(model);
-        }
         #endregion
     }
 }

@@ -6,7 +6,7 @@
     {
         <div class="section pickup-in-store">
             <p class="selector">
-                @Html.CheckBoxFor(x => x.PickUpInStore, new { @onclick = "Shipping.togglePickUpInStore(this)" })
+                @Html.CheckBoxFor(x => x.PickUpInStore, new { @onclick = "Shipping.togglePickUpInStore(this)" })                
                 <label for="@Html.FieldIdFor(model => model.PickUpInStore)">
                     @T("Checkout.PickupPoints").Text
                 </label>
@@ -27,30 +27,30 @@
             @if (Model.PickupPoints.Any())
             {
                 if (Model.PickUpInStoreOnly)
-                {
-            @Html.HiddenFor(x => x.PickUpInStore)
+                { 
+                    @Html.HiddenFor(x => x.PickUpInStore)
                 }
-            <div class="select-pickup-points">
-                @if (Model.PickupPoints.Count == 1)
+                <div class="select-pickup-points">
+                    @if (Model.PickupPoints.Count == 1)
                     {
                         var point = Model.PickupPoints.First();
-                    @Html.Hidden("pickup-points-id", string.Format("{0}___{1}", point.Id, point.ProviderSystemName))
-                    <div class="single-pickup-point">
-                        <ul>
-                            <li class="single-pickup-point name">@point.Name</li>
-                            <li class="single-pickup-point address">@(string.Format("{0} {1} {2} {3}", point.Address, point.City, point.StateName, point.CountryName))</li>
-                            @if (!string.IsNullOrEmpty(point.PickupFee))
+                        @Html.Hidden("pickup-points-id", string.Format("{0}___{1}", point.Id, point.ProviderSystemName))
+                        <div class="single-pickup-point">
+                            <ul>
+                                <li class="single-pickup-point name">@point.Name</li>
+                                <li class="single-pickup-point address">@(string.Format("{0} {1} {2} {3}", point.Address, point.City, point.StateName, point.CountryName))</li>
+                                @if (!string.IsNullOrEmpty(point.PickupFee))
                                 {
-                                <li class="single-pickup-point fee">@point.PickupFee</li>
+                                    <li class="single-pickup-point fee">@point.PickupFee</li>
                                 }
-                        </ul>
-                    </div>
+                            </ul>
+                        </div>
                     }
                     else
                     {
-                    <label for="pickup-points-select">@T("Checkout.PickupPoints.SelectPickupPoint")</label>
-                    <select name="pickup-points-id" id="pickup-points-select" class="address-select" title="">
-                        @foreach (var point in Model.PickupPoints)
+                        <label for="pickup-points-select">@T("Checkout.PickupPoints.SelectPickupPoint")</label>
+                        <select name="pickup-points-id" id="pickup-points-select" class="address-select" title="">
+                            @foreach (var point in Model.PickupPoints)
                             {
                                 var addressLine = new StringBuilder();
                                 addressLine.Append(point.Name);
@@ -74,16 +74,16 @@
                                 {
                                     addressLine.AppendFormat(", {0}", point.PickupFee);
                                 }
-                            <option value="@(string.Format("{0}___{1}", point.Id, point.ProviderSystemName))">@(addressLine)</option>
+                                <option value="@(string.Format("{0}___{1}", point.Id, point.ProviderSystemName))">@(addressLine)</option>
                             }
-                    </select>
+                        </select>
                     }
-            </div>
+                </div>
                 if(Model.DisplayPickupPointsOnMap)
                 {
                     var src = string.Format("https://maps.googleapis.com/maps/api/js{0}", string.IsNullOrEmpty(Model.GoogleMapsApiKey) ? string.Empty : string.Format("?key={0}", Model.GoogleMapsApiKey));
-            <div class="pickup-points-map" id="map">
-                <script type="text/javascript">
+                    <div class="pickup-points-map" id="map">
+                        <script type="text/javascript">
                             var markers = new Map();
                             var googleMap = null;
                             $(document).ready(function () {
@@ -151,7 +151,7 @@
                                             </text>
                                         }
                                     }
-
+                                        
                                     $('#pickup-points-select').change(function() {
                                         new google.maps.event.trigger(markers.get(this.value), 'click' );
                                     });
@@ -165,15 +165,15 @@
                                     })
                                 })
                             })
-                </script>
-            </div>
+                        </script>
+                    </div>
                 }
             }
             <div class="message-error">
                 <ul>
                     @foreach (var warning in Model.Warnings)
                     {
-                    <li>@warning</li>
+                        <li>@warning</li>
                     }
                 </ul>
             </div>
@@ -244,5 +244,5 @@
             </div>
             @Html.Widget("op_checkout_shipping_address_bottom")
         </div>
-                        }
+    }
 </div>

@@ -11,24 +11,13 @@
 }
 @if (!Model.OnePageCheckoutEnabled)
 {
-    @Html.Action("CheckoutProgress", "Checkout", new { step = CheckoutProgressStep.Cart })
+    @Html.Action("CheckoutProgress", "Checkout", new {step = CheckoutProgressStep.Cart})
 }
-<div class="header-section">
-    <img src="~/Themes/BigBudsTheme/Content/images/slide1.jpg" />
-    <div class="headerbox">
-        <h2>@T("ShoppingCart")</h2>
-        @*<ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contact Us</li>
-            </ol>*@
+<div class="page shopping-cart-page">
+    <div class="page-title">
+        <h1>@T("ShoppingCart")</h1>
     </div>
-</div>
-<div class="main-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg- 12 col-md-12 col-sm-12">
-                @Html.Partial("OrderSummary", Model)
-            </div>
-        </div>
+    <div class="page-body">
+        @Html.Partial("OrderSummary", Model)
     </div>
 </div>

@@ -1,11 +1,11 @@
-﻿@model CustomerNavigationModel
+﻿@model CustomerNavigationModel           
 @using Nop.Web.Models.Customer;
 <div class="block block-account-navigation">
     <div class="title">
         <strong>@T("Account.Navigation")</strong>
     </div>
-    <nav class="navbar navbar-default sidenav">
-        <ul class="nav navbar-nav">
+    <div class="listbox">
+        <ul class="list">
             @Html.Widget("account_navigation_before")
             @foreach (var item in Model.CustomerNavigationItems)
             {
@@ -15,5 +15,5 @@
             }
             @Html.Widget("account_navigation_after")
         </ul>
-    </nav>
+    </div>
 </div>
